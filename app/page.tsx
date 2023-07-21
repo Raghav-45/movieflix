@@ -18,6 +18,7 @@ const getMovies = async (): Promise<Movie[]> => {
   if (!res.ok) {
     throw new Error('failed to fetch')
   }
+  await new Promise((resolve) => setTimeout(resolve, 300))
   const data = await res.json()
   return data.results
 }
@@ -34,7 +35,7 @@ export default async function Home() {
             {/* <img className='h-full w-full' src={movie.poster_path ? `https://image.tmdb.org/t/p/original${movie.poster_path}` : 'https://www.mykite.in/kb/NoImageFound.jpg.png'} alt={movie.title} /> */}
           </div>
         ))}
-        <div className='pb-[170px]'></div>
+        <div className='pb-[270px]'></div>
       </div>
     </div>
   )
