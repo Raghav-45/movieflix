@@ -18,7 +18,7 @@ const getMovies = async (): Promise<Movie[]> => {
   if (!res.ok) {
     throw new Error('failed to fetch')
   }
-  await new Promise((resolve) => setTimeout(resolve, 10000))
+  // await new Promise((resolve) => setTimeout(resolve, 10000))
   const data = await res.json()
   return data.results
 }
