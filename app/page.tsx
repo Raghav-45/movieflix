@@ -14,7 +14,7 @@ type Movie = {
 }
 
 const getMovies = async (): Promise<Movie[]> => {
-  const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.TMDB_API}&language=en-US&query=${'spiderman'}&page=1&include_adult=false`)
+  const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.TMDB_APIKEY}&language=en-US&query=${'spiderman'}&page=1&include_adult=false`)
   if (!res.ok) {
     throw new Error('failed to fetch')
   }
