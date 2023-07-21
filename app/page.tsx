@@ -25,7 +25,6 @@ const getMovies = async (): Promise<Movie[]> => {
 
 export default async function Home() {
   const movies = await getMovies()
-  // console.log(movies.map(movie => movie.title))
   return (
     <div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-9 gap-2.5 px-2.5 bg-gradient-to-b from-black/60 from-50% via-black/60 via-80%">
